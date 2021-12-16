@@ -11,6 +11,7 @@ module.exports = {
       "tertiary-main": "#FF9900",
       "tertiary-light": "#ffddaa",
       black: "#000000",
+      "background-light-alpha": "#FFFFFFdd",
     },
     fontSize: {
       "20xl": "200px",

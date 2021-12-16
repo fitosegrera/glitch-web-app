@@ -16,7 +16,7 @@
   };
 </script>
 
-<Motion animate={{ scale: 1.25 }} transition={{ duration: 0.25 }} let:motion>
+<Motion whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.25 }} let:motion>
   <a href={url}>
     <div
       use:motion

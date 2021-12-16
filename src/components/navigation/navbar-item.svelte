@@ -21,13 +21,7 @@
   on:mouseleave={handleMouseLeave}
   class="text-xl w-auto"
 >
-  <Motion
-    animate={{ scale: 1.5 }}
-    transition={{ duration: 0.25 }}
-    whileHover={{ scale: 1.6 }}
-    whileTap={{ scale: 1.25 }}
-    let:motion
-  >
+  <Motion whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.25 }} let:motion>
     <div class="text-primary-dark color-anim-txt" use:motion>
       <a href={"/" + id}>{label}</a>
       <div {id} class="h-4" />

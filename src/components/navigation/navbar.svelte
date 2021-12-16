@@ -2,11 +2,12 @@
   //COMPONENTS
   import Item from "./navbar-item.svelte";
   import Icon from "./navbar-icon.svelte";
-  import Button from "../buttons/retro/wallet-outlined.svelte";
 </script>
 
-<div class="text-primary-dark w-full px-240 ">
-  <nav class="flex w-full py-32 items-center space-x-120 justify-center">
+<div class="text-primary-dark w-full px-240">
+  <nav
+    class="bg-background-light-alpha flex w-full py-32 items-center space-x-120 justify-center"
+  >
     <!-- <div class="flex h-48">
       <img src="/assets/logo.png" alt="metamind logo" />
     </div> -->
