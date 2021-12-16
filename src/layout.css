@@ -18,6 +18,10 @@
   background: linear-gradient(180deg, #ffffff, 30%, #9dfffad8, 80%, #a6ff00);
 }
 
+.gradient-section-bg-light-inverse {
+  background: linear-gradient(180deg, #a6ff00, 30%, #ffffff);
+}
+
 .gradient-icons {
   color: #9b25a8;
 }
@@ -28,8 +32,22 @@
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-text-link {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(0, 255, 200),
+    rgb(122, 255, 14)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-text-dark {
-  background: -webkit-linear-gradient(rgb(71, 31, 68), rgb(29, 40, 41));
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(39, 56, 52),
+    rgb(122, 255, 14)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -118,34 +136,34 @@
     color: rgba(0, 0, 255, 0.472);
   }
   10% {
-    color: #8d44ad7a;
+    color: #8d44adde;
   }
   20% {
-    color: #1abc9c80;
+    color: #1abc9cd0;
   }
   30% {
-    color: #d3540057;
+    color: #d35400bd;
   }
   40% {
-    color: rgba(0, 0, 255, 0.452);
+    color: rgba(0, 0, 255, 0.76);
   }
   50% {
-    color: #34495ea2;
+    color: #fdffa4;
   }
   60% {
-    color: rgba(0, 0, 255, 0.616);
+    color: rgb(181, 181, 255);
   }
   70% {
-    color: #297fb9b9;
+    color: #0099ffe5;
   }
   80% {
-    color: #f1c40fb4;
+    color: #ffe991;
   }
   90% {
-    color: #297fb9a1;
+    color: #81ccff;
   }
   100% {
-    color: rgba(255, 192, 203, 0.74);
+    color: rgb(255, 192, 203);
   }
 }
 
@@ -158,8 +176,40 @@
   );
   /* background: transparent; */
 }
+.color-anim-bg-light {
+  background: -webkit-linear-gradient(
+    25deg,
+    rgb(5, 1, 24) 20%,
+    rgb(39, 10, 39) 60%
+  );
+  /* background: transparent; */
+}
+
+.color-anim-bg-light:hover {
+  -webkit-animation: bg-color-change 0.3s infinite alternate;
+}
 
 .color-anim-bg:hover {
+  -webkit-animation: bg-color-change 0.3s infinite alternate;
+}
+
+.anim-border {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 4px;
+  border-radius: 50%;
+}
+
+.anim-border-color {
+  /* border-image-source: linear-gradient(
+    40deg,
+    rgb(20, 0, 6) 10%,
+    rgb(0, 12, 0) 30%,
+    rgb(47, 47, 0) 90%
+  ); */
+}
+
+.anim-border-color:hover {
   -webkit-animation: bg-color-change 0.3s infinite alternate;
 }
 

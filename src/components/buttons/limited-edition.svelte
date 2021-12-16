@@ -1,20 +1,24 @@
 <script>
   //LIBS
+  import { Motion } from "svelte-motion";
   import Icon from "@iconify/svelte";
-
-  //PROPS
-  export let label;
 </script>
 
-<button
-  class="flex items-center color-anim-icon-infinite space-x-12 border-8 border-gradient border-gradient-color text-primary-dark text-2xl leading-2xl w-auto px-48 py-16 mb-24"
->
-  <Icon icon="el:fire" />
-  <h1 class="py-8">{label}</h1>
-</button>
+<Motion whileHover={{ scale: 1.1 }} let:motion>
+  <button
+    use:motion
+    class="flex justify-center items-center color-anim-bg-light w-auto h-96 space-x-20 text-secondary-light px-32"
+  >
+    <div class="text-2xl color-anim-icon-infinite">
+      <Icon icon="carbon:star-filled" />
+    </div>
+    <h1 class="text-2xl font-bold text-secondary-light ">Limited Edition</h1>
+  </button>
+</Motion>
 
 <style>
-  button {
-    border-radius: 50%;
+  div :global(svg) {
+    font-size: 48px;
+    line-height: 1em;
   }
 </style>

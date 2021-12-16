@@ -5,39 +5,43 @@
 </script>
 
 <div id="wrapper" class="h-960">
+  <h1 class="text-4xl text-center font-bold">-- Nuestra Colección --</h1>
   <div
-    class="flex flex-col py-120 px-240 text-4xl leading-8xl text-secondary-light text-center justify-center items-center"
+    class="flex flex-col pt-120 px-240 text-4xl leading-8xl text-secondary-light text-center justify-center items-center"
   >
-    <div class="flex justify-center space-x-72 gradient-text-light">
+    <div class="flex justify-center space-x-72">
       <NftCard
         id="0001"
         price={0.1}
-        label="Buy"
+        label="Buy NFT"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/7.png"
       />
       <NftCard
         id="0002"
         price={0.1}
-        label="Buy"
+        label="Buy NFT"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/9580.png"
       />
       <NftCard
         id="0003"
         price={0.1}
-        label="Buy"
+        label="Buy NFT"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/7686.png"
       />
       <NftCard
         id="0003"
         price={0.1}
-        label="Buy"
+        label="Buy NFT"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/7686.png"
       />
     </div>
-    <div class="gradient-text-light mt-72">
-      <p>Nuestra colección de cryptoarte</p>
+    <div class="text-primary-dark mt-72 text-2xl">
+      <span class="font-bold color-anim-icon-infinite text-4xl"
+        >Próximamente</span
+      >
+      <p>encontrarás nuestra colección de cryptoarte aquí:</p>
     </div>
-    <div class="flex w-full justify-center gradient-text-light mt-72">
+    <div class="flex w-full justify-center mt-72">
       <Button label="Edición Limitada" url="" />
     </div>
   </div>

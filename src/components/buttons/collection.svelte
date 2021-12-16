@@ -7,7 +7,7 @@
 <Motion whileHover={{ scale: 1.1 }} let:motion>
   <button
     use:motion
-    class="flex mt-72 justify-center items-center color-anim-bg w-auto h-96 space-x-20 text-secondary-light px-32"
+    class="flex justify-center items-center color-anim-bg w-auto h-96 space-x-20 text-secondary-light px-32"
   >
     <div class="text-2xl text-secondary-light">
       <Icon icon="clarity:image-gallery-solid" />

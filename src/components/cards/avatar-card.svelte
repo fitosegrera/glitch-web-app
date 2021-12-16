@@ -5,7 +5,7 @@
   <div class="mt-32 leading-4xl">
     <h1 class="text-4xl font-bold">my_name</h1>
     <p class="text-2xl">role in the dao</p>
-    <a class="text-2xl font-bold gradient-text-light" href="/">more+</a>
+    <a class="text-2xl font-bold gradient-text-link" href="/">more+</a>
   </div>
 </div>
 

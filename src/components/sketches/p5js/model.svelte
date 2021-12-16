@@ -39,7 +39,7 @@
       //specularMaterial(250);
       p5.fill(p5.random(255), p5.random(255), p5.random(255));
       p5.stroke(20);
-      p5.stroke(p5.random(255), p5.random(255), p5.random(255));
+      p5.stroke(255);
       p5.strokeWeight(0.25);
       p5.rotateX(90);
       p5.rotateZ(p5.frameCount / 10);

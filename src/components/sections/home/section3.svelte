@@ -4,9 +4,9 @@
 
 <div
   id="wrapper"
-  class="h-800 text-6xl leading-2xl text-primary-dark text-center font-bold mt-120"
+  class="h-full text-4xl gradient-section-bg-light leading-8xl text-center font-bold pt-120 mt-120"
 >
-  <h1>#Meet the team</h1>
+  <h1>-- ¿Quién? --</h1>
   <div class="grid grid-cols-3 gap-72 mt-120">
     <div>
       <AvatarCard />

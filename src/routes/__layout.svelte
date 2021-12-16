@@ -1,6 +1,7 @@
 <script>
   import MainContainer from "../components/containers/main.svelte";
   import Navbar from "../components/navigation/navbar.svelte";
+  import Footer from "../components/navigation/footer.svelte";
   import "../layout.css";
 </script>
 
@@ -17,6 +18,7 @@
 <MainContainer>
   <slot />
 </MainContainer>
+<Footer />
 
 <style>
   @tailwind base;

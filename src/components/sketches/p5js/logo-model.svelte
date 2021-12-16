@@ -1,6 +1,8 @@
 <script>
   import { onMount } from "svelte";
 
+  export let id;
+
   onMount(async () => {
     const p5Module = await import("p5");
     let P5 = p5Module.default;
@@ -21,7 +23,7 @@
 
     p5.setup = () => {
       canv = p5.createCanvas(72, 72, p5.WEBGL);
-      canv.parent("logo-model");
+      canv.parent(id);
       p5.background(0, 0);
       p5.angleMode(p5.DEGREES);
       p5.noiseDetail(10, 0.5);
@@ -35,10 +37,10 @@
       p5.ambientLight(250);
       //pointLight(255, 255, 255, -100, 100, 400);
       //specularMaterial(250);
-      p5.fill(p5.random(255), p5.random(255), p5.random(255));
+      // p5.fill(p5.random(255), p5.random(255), p5.random(255));
       p5.stroke(20);
       p5.stroke(p5.random(255), p5.random(255), p5.random(255));
-      p5.strokeWeight(0.25);
+      p5.strokeWeight(1);
       p5.rotateY(p5.frameCount / 10);
       p5.rotateX(p5.millis() / 100);
       p5.rotateZ(p5.frameCount / 2);
