@@ -15,7 +15,7 @@
 }
 
 .gradient-section-bg-light {
-  background: linear-gradient(90deg, #f4507b, #9c5ff3);
+  background: linear-gradient(180deg, #b2f0ff, 80%, #f0fada);
 }
 
 .gradient-icons {
@@ -30,6 +30,25 @@
 
 .gradient-text-dark {
   background: -webkit-linear-gradient(rgb(71, 31, 68), rgb(29, 40, 41));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-chapeta {
+  /* background: -webkit-linear-gradient(
+    90deg,
+    rgb(255, 0, 76),
+    rgb(9, 255, 0),
+    rgb(251, 255, 0),
+    rgb(255, 179, 0)
+  ); */
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(255, 0, 76) 10%,
+    rgb(9, 255, 0) 50%,
+    rgb(251, 255, 0) 60%,
+    rgb(0, 60, 255)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

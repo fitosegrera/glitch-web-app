@@ -2,15 +2,14 @@
   //COMPONENTS
   import Item from "./navbar-item.svelte";
   import Icon from "./navbar-icon.svelte";
+  import GlitchverseLogo from "../misc/glitchverse-logo.svelte";
 </script>
 
 <div class="text-primary-dark w-full px-240">
   <nav
-    class="bg-background-light-alpha flex w-full py-32 items-center space-x-120 justify-center"
+    class="bg-transparent flex w-full py-32 items-center space-x-120 justify-center"
   >
-    <!-- <div class="flex h-48">
-      <img src="/assets/logo.png" alt="metamind logo" />
-    </div> -->
+    <GlitchverseLogo />
     <div class="flex space-x-96 pt-16">
       <Item label="Glitch?" id="about" />
       <Item label="Collection" id="explorer" />

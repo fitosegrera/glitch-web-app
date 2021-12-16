@@ -10,8 +10,9 @@ module.exports = {
       "secondary-light": "#efFFFFcc",
       "tertiary-main": "#FF9900",
       "tertiary-light": "#ffddaa",
+      "background-light-alpha": "#FFFFFFbb",
       black: "#000000",
-      "background-light-alpha": "#FFFFFFdd",
+      transparent: "#00000000",
     },
     fontSize: {
       "20xl": "200px",
