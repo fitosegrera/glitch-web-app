@@ -5,18 +5,20 @@
   import GlitchverseLogo from "../misc/glitchverse-logo.svelte";
 </script>
 
-<div class="text-primary-dark w-full px-240">
+<div class="text-primary-dark w-full">
   <nav
-    class="bg-transparent flex w-full py-32 items-center space-x-120 justify-center"
+    class="bg-transparent flex w-full px-32 py-32 items-center space-x-120 justify-center"
   >
-    <GlitchverseLogo />
-    <div class="flex space-x-96 pt-16">
+    <div class="flex flex-grow">
+      <GlitchverseLogo />
+    </div>
+    <div class="flex space-x-48 pt-16">
       <Item label="Glitch?" id="about" />
       <Item label="Collection" id="explorer" />
       <Item label="Who?" id="quien" />
       <Item label="Contact" id="cuentamelo" />
     </div>
-    <div class="flex justify-end space-x-72">
+    <div class="flex justify-end space-x-32">
       <Icon img_url="/assets/imgs/discord-icon-h480.png" url="/" id="twitter" />
       <Icon img_url="/assets/imgs/twitter-icon-h480.png" url="/" id="discord" />
     </div>

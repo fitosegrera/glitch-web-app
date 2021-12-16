@@ -6,7 +6,8 @@
 
   const handleMouseEnter = async () => {
     let underline = document.getElementById(id);
-    underline.style.background = "linear-gradient(90deg, #f4507b, #9c5ff3)";
+    underline.style.background =
+      "linear-gradient(90deg,rgb(255, 0, 76) 10%, rgb(9, 255, 0) 30%, rgb(251, 255, 0) 90%)";
   };
 
   const handleMouseLeave = async () => {
@@ -34,6 +35,6 @@
   }
 
   a {
-    font-weight: 600;
+    font-weight: 400;
   }
 </style>

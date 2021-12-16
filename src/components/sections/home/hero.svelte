@@ -1,14 +1,8 @@
 <script>
   //LIBS
   import { Motion } from "svelte-motion";
-
-  //STORES
-  import { memoryData } from "../../../stores/stores";
-
-  //COMPONENTS
-  import TwitterButton from "../../buttons/retro/twitter.svelte";
-  import DiscordButton from "../../buttons/retro/discord.svelte";
   import Sketch from "../../sketches/p5js/model.svelte";
+  import Button from "../../buttons/collection.svelte";
 
   //PROPS
   export let heading;
@@ -17,11 +11,11 @@
 <div class="h-screen" />
 <div
   id="wrapper"
-  class="h-screen w-full justify-center px-64 pt-240 gradient-section-bg-light"
+  class="h-screen w-full justify-center px-196 pt-240 gradient-section-bg-light"
 >
-  <div class="flex items-center ">
-    <div class="flex w-full mt-32">
-      <div class="px-240 space-y-32">
+  <div class="grid grid-flow-col grid-cols-3 items-center">
+    <div class="flex w-full mt-32 col-start-1 col-end-3">
+      <div class="space-y-32">
         <h1 class="text-8xl font-bold text-primary-dark text-left leading-8xl">
           Headline
         </h1>
@@ -33,6 +27,7 @@
           <span class="color-anim-icon">{heading.split("%%")[1]}</span>
           {heading.split("%%")[2]}
         </h1>
+        <Button label="Get Glitch NFTs" />
       </div>
     </div>
     <div
@@ -41,11 +36,6 @@
       <div id="model" />
       <Sketch />
     </div>
-
-    <!-- <div class="flex h-190 justify-center space-x-48 mt-56">
-    <TwitterButton />
-    <DiscordButton />
-  </div> -->
   </div>
 </div>
 <div class="w-auto mt-120">

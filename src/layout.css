@@ -15,11 +15,11 @@
 }
 
 .gradient-section-bg-light {
-  background: linear-gradient(180deg, #b2f0ff, 80%, #f0fada);
+  background: linear-gradient(180deg, #ffffff, 30%, #9dfffad8, 80%, #a6ff00);
 }
 
 .gradient-icons {
-  color: #2f1c319d;
+  color: #9b25a8;
 }
 
 .gradient-text-light {
@@ -35,19 +35,11 @@
 }
 
 .gradient-text-chapeta {
-  /* background: -webkit-linear-gradient(
-    90deg,
-    rgb(255, 0, 76),
-    rgb(9, 255, 0),
-    rgb(251, 255, 0),
-    rgb(255, 179, 0)
-  ); */
   background: -webkit-linear-gradient(
-    0deg,
+    40deg,
     rgb(255, 0, 76) 10%,
-    rgb(9, 255, 0) 50%,
-    rgb(251, 255, 0) 60%,
-    rgb(0, 60, 255)
+    rgb(9, 255, 0) 30%,
+    rgb(251, 255, 0) 90%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,15 +53,16 @@
 
 .border-gradient-color {
   border-image-source: linear-gradient(
-    to left,
-    rgb(243, 113, 200),
-    rgb(139, 89, 255)
+    40deg,
+    rgb(255, 0, 76) 10%,
+    rgb(9, 255, 0) 30%,
+    rgb(251, 255, 0) 90%
   );
 }
 
 /*ANIMATIONS*/
 .color-anim-icon {
-  color: rgb(144, 119, 151);
+  color: rgba(19, 1, 17, 0.829);
 }
 
 .color-anim-icon-infinite {
@@ -157,8 +150,13 @@
 }
 
 .color-anim-bg {
-  /* background: -webkit-linear-gradient(rgb(243, 113, 200), rgb(139, 89, 255)); */
-  background: transparent;
+  background: -webkit-linear-gradient(
+    25deg,
+    rgb(39, 0, 5) 20%,
+    rgb(11, 54, 9) 40%,
+    rgb(48, 49, 4)
+  );
+  /* background: transparent; */
 }
 
 .color-anim-bg:hover {
