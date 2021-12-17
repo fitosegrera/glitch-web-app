@@ -1,6 +1,5 @@
 <script>
   //COMPONENTS
-  import Item from "./navbar-item.svelte";
   import Icon from "./navbar-icon.svelte";
   import GlitchverseLogo from "../misc/glitchverse-logo.svelte";
 </script>
@@ -9,8 +8,9 @@
   <nav
     class="bg-transparent flex w-full px-32 py-32 items-center space-x-120 justify-center"
   >
-    <div class="flex flex-grow">
+    <div class="flex flex-grow items-center space-x-32">
       <GlitchverseLogo id="footer-logo" />
+      <p>© 2021 GLITCHVERSE</p>
     </div>
 
     <div class="flex justify-end space-x-32">

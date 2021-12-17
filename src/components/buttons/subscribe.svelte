@@ -10,7 +10,7 @@
 <Motion whileHover={{ scale: 1.1 }} let:motion>
   <button
     use:motion
-    class="flex justify-center items-center color-anim-bg-light w-auto h-64 space-x-16 px-32"
+    class="flex justify-center items-center color-anim-bg-light hover:border-4 border-gradient-hover border-gradient-color-hover w-auto h-64 space-x-16 px-32"
   >
     <div class="text-2xl text-secondary-light">
       <Icon icon="mdi:email-newsletter" />

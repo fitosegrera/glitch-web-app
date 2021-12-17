@@ -5,7 +5,7 @@
 </script>
 
 <div id="wrapper" class="h-960">
-  <h1 class="text-4xl text-center font-bold">-- Nuestra Colección --</h1>
+  <h1 class="text-4xl text-center font-bold">🖼️ Nuestra Colección 🖼️</h1>
   <div
     class="flex flex-col pt-120 px-240 text-4xl leading-8xl text-secondary-light text-center justify-center items-center"
   >
@@ -13,25 +13,25 @@
       <NftCard
         id="0001"
         price={0.1}
-        label="Buy NFT"
+        label="Comprar"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/7.png"
       />
       <NftCard
         id="0002"
         price={0.1}
-        label="Buy NFT"
+        label="Comprar"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/9580.png"
       />
       <NftCard
         id="0003"
         price={0.1}
-        label="Buy NFT"
+        label="Comprar"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/7686.png"
       />
       <NftCard
         id="0003"
         price={0.1}
-        label="Buy NFT"
+        label="Comprar"
         img_url="https://cnft.tools/static/assets/projectthumbs/pussyglam/7686.png"
       />
     </div>

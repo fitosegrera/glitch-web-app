@@ -7,7 +7,7 @@
 <Motion whileHover={{ scale: 1.1 }} let:motion>
   <button
     use:motion
-    class="flex justify-center items-center color-anim-bg-light w-auto h-96 space-x-20 text-secondary-light px-32"
+    class="flex justify-center items-center color-anim-bg-light hover:border-4 border-gradient-hover border-gradient-color-hover w-auto h-96 space-x-20 text-secondary-light px-32"
   >
     <div class="text-2xl color-anim-icon-infinite">
       <Icon icon="carbon:star-filled" />

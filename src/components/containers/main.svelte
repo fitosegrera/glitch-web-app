@@ -1,3 +1,3 @@
-<main class="w-screen h-auto py-16 ">
+<main class="w-full h-auto py-16 ">
   <slot />
 </main>

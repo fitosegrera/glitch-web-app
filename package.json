@@ -25,11 +25,11 @@
 		"prismic-dom": "^2.2.6",
 		"svelte": "^3.42.6",
 		"svelte-icons": "^2.1.0",
-		"svelte-motion": "^0.11.2",
 		"tailwindcss": "^2.2.19"
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-motion": "^0.11.2",
 		"three": "^0.134.0"
 	}
 }

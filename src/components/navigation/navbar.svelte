@@ -7,7 +7,7 @@
 
 <div class="text-primary-dark w-full">
   <nav
-    class="bg-transparent flex w-full px-32 py-32 items-center space-x-120 justify-center"
+    class="bg-background-light-alpha flex w-full px-32 py-16 items-center space-x-120 justify-center"
   >
     <div class="flex flex-grow">
       <GlitchverseLogo id="navbar-logo" />

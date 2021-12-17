@@ -69,7 +69,22 @@
   border-width: 8px;
 }
 
+.border-gradient-hover:hover {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+}
+
 .border-gradient-color {
+  border-image-source: linear-gradient(
+    40deg,
+    rgb(255, 0, 76) 10%,
+    rgb(9, 255, 0) 30%,
+    rgb(251, 255, 0) 90%
+  );
+}
+
+.border-gradient-color-hover:hover {
   border-image-source: linear-gradient(
     40deg,
     rgb(255, 0, 76) 10%,
