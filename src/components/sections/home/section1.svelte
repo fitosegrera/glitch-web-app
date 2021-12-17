@@ -8,34 +8,14 @@
       paragraph:
         "Glitchverse es un fallo disruptivo para el sistema. Un colectivo humanístico que a partir del arte y la tecnología genera anomalías espacio-temporales como escenarios para la innovación y la creación de valor social, combinando lo físico y lo virtual en un solo código que reta el status quo de todo lo que sea excluyente.",
       path: "https://cdn.shopify.com/s/files/1/2255/9153/products/key_lime_74b07b44-898f-4cf8-9896-01b7d9e53495_2048x2235.jpg?v=1591808720",
-      id: "1",
-    },
-    {
-      headline: "Entra al Glitchverse",
-      paragraph:
-        "Glitchverse es un fallo disruptivo para el sistema. Un colectivo humanístico que a partir del arte y la tecnología genera anomalías espacio-temporales como escenarios para la innovación y la creación de valor social, combinando lo físico y lo virtual en un solo código que reta el status quo de todo lo que sea excluyente.",
-      path: "https://cdn.shopify.com/s/files/1/2255/9153/products/key_lime_74b07b44-898f-4cf8-9896-01b7d9e53495_2048x2235.jpg?v=1591808720",
-      id: "2",
-    },
-    {
-      headline: "Entra al Glitchverse",
-      paragraph:
-        "Glitchverse es un fallo disruptivo para el sistema. Un colectivo humanístico que a partir del arte y la tecnología genera anomalías espacio-temporales como escenarios para la innovación y la creación de valor social, combinando lo físico y lo virtual en un solo código que reta el status quo de todo lo que sea excluyente.",
-      path: "https://cdn.shopify.com/s/files/1/2255/9153/products/key_lime_74b07b44-898f-4cf8-9896-01b7d9e53495_2048x2235.jpg?v=1591808720",
-      id: "3",
+      id: "slide1",
     },
   ];
 </script>
 
 <div id="wrapper" class="flex flex-col w-full items-center">
-  <BarScroller />
-  <Interactive
-    {slides}
-    displayControls={true}
-    autoplay={false}
-    autoplaySpeed={5000}
-    speed={800}
-  />
+  <!-- <BarScroller /> -->
+  <Interactive {slides} displayControls={true} />
 </div>
 
 <style>

@@ -3,24 +3,14 @@
   import { onMount } from "svelte";
   import { flip } from "svelte/animate";
   import { createEventDispatcher, onDestroy } from "svelte";
-  import Icon from "@iconify/svelte";
 
   //SKETCHES
-  import Vortex from "../sketches/p5js/misc/vortex.svelte";
-
-  //COMPONENTS
-  // import Paginator from "../../navigation/paginator.svelte";
-  // import Button from "../../buttons/md-primary-icon-fill.svelte";
+  import Vortex from "../sketches/p5js/slides/slide1.svelte";
 
   //PROPS
   export let slides;
   export let speed;
-  export let autoplay;
-  export let autoplaySpeed;
   export let displayControls;
-
-  let interval;
-  let paginatorIndex = 0;
 
   const dispatch = createEventDispatcher();
 
@@ -30,69 +20,20 @@
     // root.style.setProperty("--controlWidth", 100 / slides.length - 2 + "%");
   });
 
-  const handleEnterLeft = () => {
-    let chevronLeft = document.getElementById("chevronLeft");
-    chevronLeft.src = "/assets/imgs/icons/chevron-left-hover.svg";
+  const handleEnterCenter = () => {
+    let chevronCenter = document.getElementById("chevronCenter");
+    chevronCenter.src = "/assets/imgs/icons/chevron-center-hover.svg";
   };
 
-  const handleLeaveLeft = () => {
-    let chevronLeft = document.getElementById("chevronLeft");
-    chevronLeft.src = "/assets/imgs/icons/chevron-left.svg";
+  const handleLeaveCenter = () => {
+    let chevronCenter = document.getElementById("chevronCenter");
+    chevronCenter.src = "/assets/imgs/icons/chevron-center.svg";
   };
 
-  const handleEnterRight = () => {
-    let chevronRight = document.getElementById("chevronRight");
-    chevronRight.src = "/assets/imgs/icons/chevron-right-hover.svg";
+  const popUp = () => {
+    let infoWrapepr = document.getElementById("info-wrapper");
+    infoWrapepr.style.visibility = "visible";
   };
-
-  const handleLeaveRight = () => {
-    let chevronRight = document.getElementById("chevronRight");
-    chevronRight.src = "/assets/imgs/icons/chevron-right.svg";
-  };
-
-  const rotateLeft = (e) => {
-    const transitioningSlide = slides[slides.length - 1];
-    document.getElementById(transitioningSlide.id).style.opacity = 0;
-    slides = [slides[slides.length - 1], ...slides.slice(0, slides.length - 1)];
-    document.getElementById(transitioningSlide.id).style.opacity = 1;
-
-    paginatorIndex++;
-    if (paginatorIndex >= slides.length) {
-      paginatorIndex = 0;
-    }
-    console.log(paginatorIndex);
-  };
-
-  const rotateRight = (e) => {
-    const transitioningSlide = slides[0];
-    document.getElementById(transitioningSlide.id).style.opacity = 0;
-    slides = [...slides.slice(1, slides.length), slides[0]];
-    document.getElementById(transitioningSlide.id).style.opacity = 1;
-
-    paginatorIndex++;
-    if (paginatorIndex >= slides.length) {
-      paginatorIndex = 0;
-    }
-    console.log(paginatorIndex);
-  };
-
-  const startAutoPlay = () => {
-    if (autoplay) {
-      interval = setInterval(rotateRight, autoplaySpeed);
-    }
-  };
-
-  const stopAutoPlay = () => {
-    clearInterval(interval);
-  };
-
-  if (autoplay) {
-    startAutoPlay();
-  }
-
-  onDestroy(() => {
-    stopAutoPlay();
-  });
 </script>
 
 <div id="carousel-container">
@@ -101,86 +42,76 @@
       <div
         alt={slide.id}
         id={slide.id}
-        on:mouseover={stopAutoPlay}
-        on:mouseout={startAutoPlay}
         on:click={() => dispatch("imageClicked", slide.path)}
         on:blur={() => console.log("BLUR")}
         on:focus={() => console.log("FOCUS")}
         animate:flip={{ duration: speed }}
       >
         <div class="flex">
-          <!-- <div id={slide.id} class="sketch" />
-          <Vortex id={slide.id} /> -->
-          <!-- <img
-            class="w-full h-full"
-            src="https://media.giphy.com/media/BSx6mzbW1ew7K/giphy.gif"
-            alt=""
-          /> -->
-          <div id="img-wrapper" class="w-full h-full" />
-
-          <div class="p-72 space-y-32 w-full">
-            <div class="flex items-center">
-              <div class="text-4xl text-secondary-light">
-                <Icon icon="mdi:image-filter-center-focus-strong" />
-              </div>
-              <h1 class="text-2xl text-secondary-light font-bold px-16">
-                {slide.headline}
-              </h1>
-            </div>
-
-            <div class="text-lg text-secondary-light">
-              <h1 class="">
-                {slide.paragraph}
-              </h1>
-            </div>
-
-            <!-- <Button
-                icon_label="ic:baseline-read-more"
-                label="Read More"
-                url="/contact"
-              /> -->
+          <div>
+            <div id="slide1" class="" />
+            <Vortex id="slide1" />
           </div>
         </div>
       </div>
     {/each}
   </div>
   {#if displayControls}
-    <div id="control-wrapper" class="">
-      <button id="left" on:click={rotateLeft}>
-        <slot name="left-control">
-          <!-- <div class="xl:w-48 lg:w-56 md:w-120 sm:w-96"> -->
-          <div class="w-32 h-full">
+    <div id="control-wrapper" class="flex items-center">
+      <button id="center" on:click={popUp}>
+        <slot name="center-control">
+          <div class="w-120 h-full">
             <img
-              id="chevronLeft"
-              src="/assets/imgs/icons/chevron-left.svg"
+              id="chevronCenter"
+              src="/assets/imgs/icons/chevron-center.svg"
               alt=""
-              on:mouseenter={handleEnterLeft}
-              on:mouseleave={handleLeaveLeft}
+              on:mouseenter={handleEnterCenter}
+              on:mouseleave={handleLeaveCenter}
             />
           </div>
         </slot>
       </button>
-      <button id="right" on:click={rotateRight}>
-        <slot name="right-control">
-          <!-- <div class="xl:w-48 lg:w-56 md:w-120 sm:w-96"> -->
-          <div class="w-32 h-full">
-            <img
-              id="chevronRight"
-              src="/assets/imgs/icons/chevron-right.svg"
-              alt=""
-              on:mouseenter={handleEnterRight}
-              on:mouseleave={handleLeaveRight}
-            />
-          </div>
-        </slot>
-      </button>
-      <div
-        id="paginator-container"
-        class="flex justify-center w-full space-x-12"
-      >
-        {#each slides as slide (slide.id)}
-          <!-- <Paginator is_active={false} /> -->
-        {/each}
+    </div>
+    <div id="info-wrapper">
+      <div class="p-64 space-y-56">
+        <div>
+          <h1 class="text-4xl text-secondary-light">Glitchverse</h1>
+          <p class="text-lg text-secondary-light">
+            Glitchverse es un fallo disruptivo para el sistema. Un colectivo
+            humanístico que a partir del arte y la tecnología genera anomalías
+            espacio-temporales como escenarios para la innovación y la creación
+            de valor social, combinando lo físico y lo virtual en un solo código
+            que reta el status quo de todo lo que sea excluyente.
+          </p>
+        </div>
+        <div>
+          <h1 class="text-4xl text-secondary-light">Visión</h1>
+          <p class="text-lg text-secondary-light">
+            Empoderar la diversidad del talento regional de la Costa Caribe
+            Colombiana para que, desde sus diferentes expresiones creativas,
+            participen del mercado nacional e internacional del arte en sus
+            diferentes formas, involucrando transversalmente géneros, etnias,
+            razas y otros segmentos demográficos que a partir de sus medios
+            artísticos físicos o digitales generen innovación social y
+            tecnológica.
+          </p>
+        </div>
+        <div>
+          <h1 class="text-4xl text-secondary-light">Propósito Transformador</h1>
+          <p class="text-lg text-secondary-light">
+            Desde la aceptación de la diversidad humana, las diferentes
+            expresiones artísticas, y siendo consientes de que las acciones
+            individuales redundan colectivamente en nuestra sociedad y el medio
+            ambiente, Glitchverse participará de la economía creativa y las
+            finanzas descentralizadas para empoderar artistas y demás partes
+            interesadas en el arte y la tecnología, facilitando los medios y las
+            herramientas para la educación, nuevas formas de aproximación a la
+            cultura y la generación de valor compartido.
+          </p>
+        </div>
+        <!-- <div id="">
+          <button class="text-2xl text-secondary-light">Close</button>
+        </div> -->
       </div>
     </div>
   {/if}
@@ -191,27 +122,26 @@
     overflow: hidden;
   }
 
-  a {
-    cursor: pointer;
-  }
-
   :root {
     --w: 100%;
     --controlWidth: 100%;
+    --buttonWidth: 300px;
   }
 
   #carousel-container {
     width: var(--w);
-    /* position: relative; */
-    /* display: flex;
-    flex-direction: column; */
-    /* overflow-x: hidden; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
   }
+
   #carousel-slides {
     width: 100%;
-    display: flex;
+    height: 100%;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     z-index: 1;
   }
 
@@ -222,6 +152,20 @@
     top: 0;
     left: 0;
     z-index: 10;
+  }
+
+  #info-wrapper {
+    position: absolute;
+    width: var(--controlWidth);
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    visibility: hidden;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.815), rgb(17, 0, 29));
+  }
+
+  #close-btn {
   }
 
   button {
@@ -238,18 +182,27 @@
   button:focus {
     outline: none;
   }
-  #left {
-    left: 10px;
-  }
-  #right {
-    right: 10px;
+
+  #center {
+    left: calc(50% - 52px);
   }
 
-  #chevronRight {
+  #chevron-center {
+    background-color: aqua;
+    border-radius: 50%;
+    width: var(--buttonWidth);
+    height: var(--buttonWidth);
+    visibility: hidden;
+    left: calc(50% - var(--buttonWidth) / 2);
+  }
+  #chevronCenterHover {
+  }
+
+  #chevronCenter {
     cursor: pointer;
   }
 
-  #chevronLeft {
+  #chevronCenterHover {
     cursor: pointer;
   }
 
@@ -258,10 +211,11 @@
     bottom: 0;
   }
 
-  #img-wrapper {
-    height: 100vh;
-    background-image: url("https://media.giphy.com/media/h8sVibFE0NChi/giphy.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
+  #Slide1 {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    /* z-index: 100; */
   }
 </style>
