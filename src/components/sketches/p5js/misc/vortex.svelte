@@ -1,8 +1,6 @@
 <script>
   import { onMount } from "svelte";
 
-  export let id;
-
   onMount(async () => {
     const p5Module = await import("p5");
     let P5 = p5Module.default;
@@ -12,40 +10,43 @@
   const sketch = (p5) => {
     let canv;
 
-    let w;
-    let h;
+    let w = 800;
+    let h = 200;
 
-    let model;
-
-    p5.preload = () => {
-      model = p5.loadModel("/assets/3d/glitch.stl");
-    };
+    p5.preload = () => {};
 
     p5.setup = () => {
-      canv = p5.createCanvas(800, 800, p5.WEBGL);
+      canv = p5.createCanvas(w, h);
       canv.parent("vx");
-      p5.background(0, 0);
-      p5.angleMode(p5.DEGREES);
-      p5.noiseDetail(10, 0.5);
-      //p5.textureMode(p5.NORMAL);
-      // p5.rectMode(p5.CORNER);
+      p5.background(255);
+      p5.noStroke();
+      p5.fill(0);
     };
 
     p5.draw = () => {
-      p5.background(10, 0);
+      p5.background(255, 70);
 
-      p5.ambientLight(250);
-      //pointLight(255, 255, 255, -100, 100, 400);
-      //specularMaterial(250);
-      // p5.fill(p5.random(255), p5.random(255), p5.random(255));
-      p5.stroke(20);
-      p5.stroke(p5.random(255), p5.random(255), p5.random(255));
-      p5.strokeWeight(1);
-      p5.rotateY(p5.frameCount / 10);
-      p5.rotateX(p5.millis() / 100);
-      p5.rotateZ(p5.frameCount / 2);
-      p5.scale(65);
-      p5.model(model);
+      let t = p5.millis() / 32000;
+      let n = 3;
+
+      for (let j = 1; j < 49; j++) {
+        for (let i = 0; i < n; i++) {
+          let f = (i / n) * p5.TWO_PI;
+          let r = p5.sin(f + 0) * 127 + 128;
+          let g = p5.sin(f + 2) * 127 + 128;
+          let b = p5.sin(f + 4) * 127 + 128;
+
+          p5.fill(r, g, b);
+
+          p5.ellipse(
+            w / 2 + j * 15 * p5.sin((i / n) * p5.TWO_PI + t * j),
+            h / 2 + j * 15 * p5.cos((i / n) * p5.TWO_PI + t * j),
+            3,
+            3
+          );
+        }
+        n += 3;
+      }
     };
 
     p5.windowResized = () => {

@@ -45,8 +45,9 @@
 .gradient-text-dark {
   background: -webkit-linear-gradient(
     45deg,
-    rgb(39, 56, 52),
-    rgb(122, 255, 14)
+    rgb(39, 50, 56),
+    rgb(24, 51, 2),
+    rgb(46, 18, 2)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

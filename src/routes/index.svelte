@@ -13,7 +13,7 @@
   import { memoryData, dataUrl } from "../stores/stores";
 
   let heroHeading =
-    "%%xyz%% arte, tecnología, cultura, emprendimiento e innovación.";
+    "%%Innovación social%%, arte, tecnología, cultura y emprendimiento.";
 
   const fetchData = async () => {
     let res = await fetch($dataUrl).then((response) => response.json());

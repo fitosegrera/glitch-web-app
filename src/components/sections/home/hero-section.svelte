@@ -16,17 +16,17 @@
     <div class="flex w-full mt-32 col-start-1 col-end-3">
       <div class="space-y-32">
         <h1 class="text-8xl font-bold text-primary-dark text-left leading-8xl">
-          Headline
+          NO:ERROR 404
         </h1>
         <h1
           id="heading"
           class="text-2xl text-primary-dark text-left leading-5xl"
         >
           {heading.split("%%")[0]}
-          <span class="color-anim-icon">{heading.split("%%")[1]}</span>
+          <span class="color-anim-icon-infinite">{heading.split("%%")[1]}</span>
           {heading.split("%%")[2]}
         </h1>
-        <Button label="Get Glitch NFTs" />
+        <Button label="Get NFTs" />
       </div>
     </div>
     <div
