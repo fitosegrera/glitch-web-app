@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="flex flex-col h-full w-full px-196 py-160 gradient-section-bg-light-inverse space-y-64"
+  class="flex flex-col h-full w-full px-196  pb-240 gradient-section-bg-light-inverse space-y-64"
 >
   <div class="w-full">
     <h1

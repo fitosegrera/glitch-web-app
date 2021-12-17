@@ -11,8 +11,8 @@
 
 <style>
   #avatar {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     background-image: url("/assets/imgs/avatar.png");
     background-size: cover;
   }

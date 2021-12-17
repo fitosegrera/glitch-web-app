@@ -4,7 +4,7 @@
   import Button from "../../buttons/limited-edition.svelte";
 </script>
 
-<div id="wrapper" class="h-960">
+<div id="wrapper" class="h-960 pt-96">
   <h1 class="text-4xl text-center font-bold">🖼️ Nuestra Colección 🖼️</h1>
   <div
     class="flex flex-col pt-120 px-240 text-4xl leading-8xl text-secondary-light text-center justify-center items-center"
@@ -36,10 +36,12 @@
       />
     </div>
     <div class="text-primary-dark mt-72 text-2xl">
-      <span class="font-bold color-anim-icon-infinite text-4xl"
-        >Próximamente</span
-      >
-      <p>encontrarás nuestra colección de cryptoarte aquí:</p>
+      <p>
+        <span class="font-bold color-anim-icon-infinite text-4xl">
+          Próximamente
+        </span>
+        encontrarás nuestra colección de cryptoarte aquí:
+      </p>
     </div>
     <div class="flex w-full justify-center mt-72">
       <Button label="Edición Limitada" url="" />

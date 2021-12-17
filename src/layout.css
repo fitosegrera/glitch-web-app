@@ -27,7 +27,7 @@
 }
 
 .gradient-text-light {
-  background: -webkit-linear-gradient(rgb(243, 113, 200), rgb(139, 89, 255));
+  background: -webkit-linear-gradient(rgb(255, 188, 233), rgb(205, 184, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -105,6 +105,10 @@
 
 .color-anim-icon:hover {
   -webkit-animation: icon-color-change 0.3s infinite alternate;
+}
+
+.color-anim-txt {
+  color: #1abc9c;
 }
 
 .color-anim-txt:hover {
